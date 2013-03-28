@@ -186,16 +186,13 @@ public class MongoSourceElement
         }
     }
 
-    @Override
     public void addConfigElement(ConfigElement configElement) {
     }
 
-    @Override
     public boolean expectsModification() {
         return false;
     }
 
-    @Override
     public void testStarted() {
         if(log.isDebugEnabled()) {
             log.debug(getTitle() + " testStarted");
@@ -233,12 +230,10 @@ public class MongoSourceElement
         }
     }
 
-    @Override
     public void testStarted(String s) {
         testStarted();
     }
 
-    @Override
     public void testEnded() {
         if(log.isDebugEnabled()) {
             log.debug(getTitle() + " testEnded");
@@ -246,7 +241,6 @@ public class MongoSourceElement
         ((MongoDB)getThreadContext().getVariables().getObject(getSource())).clear();
     }
 
-    @Override
     public void testEnded(String s) {
         testEnded();
     }
